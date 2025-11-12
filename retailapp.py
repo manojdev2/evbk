@@ -224,7 +224,7 @@ def generate_ai_recommendation_petrol(user_location, station_data):
         ```
         """
 
-        model = genai.GenerativeModel("gemini-1.5-flash")
+        model = genai.GenerativeModel("gemini-2.0-flash-exp")
         response = model.generate_content(prompt)
         ai_text = response.text.strip()
 
@@ -323,7 +323,7 @@ def generate_ai_recommendation(user_location, station_data):
         """
 
         # Generate AI response
-        model = genai.GenerativeModel("gemini-1.5-flash")
+        model = genai.GenerativeModel("gemini-2.0-flash-exp")
         response = model.generate_content(prompt)
 
         # Ensure AI response is not empty
@@ -552,4 +552,5 @@ def predict_best_station(latitude, longitude, search_keyword, ai_recommendation_
 
 if __name__ == '__main__':
     app.run(debug=True)
+
 
