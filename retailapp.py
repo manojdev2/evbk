@@ -11,7 +11,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Configure Google Generative AI and Google Maps
-genai.configure(api_key='AIzaSyD4hQw106GNViPQXZc8DOR06_Vs4fMrsLw')
+genai.configure(api_key='AIzaSyCP7SXQh5kgSk7wHiz2rgyqgs-0knykZxQ')
 gmaps = googlemaps.Client(key="AIzaSyDAUhNkL--7MVKHtlFuR3acwa7ED-cIoAU")
 WEATHER_API_KEY = "6419738e339e4507aa8122732240910"
 WEATHER_API_URL = "http://api.weatherapi.com/v1/current.json"
@@ -552,5 +552,6 @@ def predict_best_station(latitude, longitude, search_keyword, ai_recommendation_
 
 if __name__ == '__main__':
     app.run(debug=True)
+
 
 
